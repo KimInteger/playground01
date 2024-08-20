@@ -1,21 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-type Player = {
-  hp: number,
-  atk : number,
-  exp : number
+interface Player {
+  hp: number;
+  atk: number;
+  exp: number;
 }
 
 interface PlayerProps {
-  player : Player
+  player: Player;
 }
 
-const PlayerSection : React.FC<PlayerProps> = ({player}) => {
+const PlayerSection: React.FC<PlayerProps> = ({ player }) => {
   return (
-    <div>
-      <p>HP : {player.hp}</p>
-      <p>ATK : {player.atk}</p>
-      <p>EXP : {player.exp}</p>
+    <div className="bg-blue-900 text-white p-6 rounded-lg shadow-md w-[180px] h-[240px] mr-16">
+      <h2>player</h2>
+      <p className="mb-2">HP: <span className="font-semibold">{player.hp}</span></p>
+      <p className="mb-2">ATK: <span className="font-semibold">{player.atk}</span></p>
+      <p>EXP: <span className="font-semibold">{player.exp}</span></p>
     </div>
-  )
-}
+  );
+};
+
+export default PlayerSection;
