@@ -1,11 +1,14 @@
 type Player = {
   hp : number
   atk : number
+  exp : number
 }
 
 type Monster = {
   hp : number
+  atk : number
   def : number
+  exp : number
 }
 
 const attackSome = (player : Player,monster :Monster) => {
